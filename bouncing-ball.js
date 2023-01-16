@@ -24,13 +24,14 @@ function bouncingBall() {
   ball.style.top = positionY + "px";
 
   // switch directions when it hits a wall 
+  let hitWall = false;
   if ( positionX >= Xmax || positionX <= 0 ) {
     velocityX = -velocityX;
-    var hitWall = true;
+    hitWall = true;
   }
   if ( positionY >= Ymax || positionY <= 0 ) {
     velocityY = -velocityY;
-    var hitWall = true;
+    hitWall = true;
   }
   
   // change the color of the ball if it hits a wall
